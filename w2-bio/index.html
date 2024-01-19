@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tony Calmeiro" >
+    <meta name="description" content="Week 2 Bio" >
+    
+    <title>W2 | Bio Page</title>
+
+    <!--in-document styling-->
+    <style>
+        /*in here we write CSS*/
+
+        /*SELECTING ELEMENTS in CSS & JS
+
+            selector {
+                property:value;
+                property:value;
+            }
+
+            WAYS TO SELECT:
+                *by ELEMENT type (all elements of type are styled)
+                *by ID name (only the elements is styled)
+                *by CLASS name (only elements in that class are styled)
+        */
+
+        /*by ELEMENT*/
+        div {
+            /*all div elements will have the below style*/
+            border:1px solid black;
+            margin:10px; /*adds space between border & other elements, all 4 sides*/
+            padding:10px; /*adds space between element content & border, all 4 sides*/
+        }
+        /*by ID*/
+        
+        #header {
+            /*by #id name*/
+            border:3px solid blue;
+        }
+
+        /*by CLASS*/
+        .bg {
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+    <!--Tony Calmeiro | SE111.01 | 01/19/2023-->
+
+<body style="background-color:lightgray">
+    <div id="wrapper">
+
+        <!--HEADER-->
+        <div id="header">
+            <h1>Tony Calmeiro</h1>
+            <h2>The Man, The Myth, The Legend</h2>
+        
+        </div>
+
+        <!--NAV BAR-->
+        <div id="nav">
+
+            <a href="https://www.neit.edu/" target="_blank">Visit NEIT!</a>
+
+            <br>
+
+            <a href="#bio">BIO</a>
+            <a href="#schools">SCHOOLS</a>
+            <a href="#hobbies">HOBBIES</a>
+
+            <br>
+
+            <a href="#footer">Bottom of Page!</a>
+        
+        </div>
+
+        <!--BIO-->
+        <div id="bio">
+            <h2>My Bios - All about me</h2>
+
+            <p>I was born on <b>January 5th 1990</b> in Providence, Rhode Island. I grew up in East Providence, Rhode Island and graduated from East Providence High School in 2008. I worked at <i>Gamestop</i> as a store manager from <u>2008-2013</u>. After that I took a job with <i>AT&T</i> as a store manager from <u>2013-2018</u>. In September of 2018 I left for <i>Marine Corps Recurit Training</i> upon Marine Corps Recruit Depot San Diego, California. After three months of recurit training, I countiued <i>Marine Combat Training</i> for one month at Camp Pendleton, California. Upon My completion of combat training I attended <i>Aviation A&C School</i> in Pensacola, Florida for six months. Then I continued my training at the <i>Naval Aviaiton Tech Training</i> in Virginia Beach, Virginia for three months. When my schooling was complete I was assgined my permanet duty sation with <i>Marine Aviation Logistics Squadron - 11</i> in San Diego, California where I served as an <b>Avionics Technician</b>. In March 2021 I went on a deployment to Iwakuni, Japan until September 2021. After my deployment I spent the rest of my time in service with MALS-11 in San diego, California until September 2023. After my military service I moved back to Rhode Island where I am currently attending <i>New England Institue of Technology</i>, where I am obtaining a bachelors degree in <u>Cyber Security and Network Engineering</u>. 
+            </p>
+
+            <img src="images/me.jpg" alt="Photo of Tony Calmeiro in a Suit" width="500">
+            
+        </div>
+
+        <!--SCHOOLS-->
+        <div id="schools">
+
+            <h2>My Schooling</h2>
+
+            <!--ordered list-->
+            <ol>
+                <li>East Providence High School - 2008</li>
+                <li>Marine Corps Recruit Training - 2018</li>
+                <li>Marine Combat Training - 2019</li>
+                <li>Aviation A&C School - 2019</li>
+                <li>Naval Aviation Tech Training - 2020</li>
+                <li>New England Institue of Technology - Present</li>
+
+            </ol>
+
+            <img src="images/mcrd.webp" alt="Marine Corps Recruit Depot" width="500">
+            <img src="images/neit.jpg" alt="New England Institue of Technology" width="548">
+
+        </div>
+
+        <!--HOBBIES-->
+        <div id="hobbies">
+
+            <h2>Things I like to Do</h2>
+
+            <!--unordered list-->
+            <ul>
+                <li>Creating Music</li>
+                <li>Playing Video Games</li>
+                <li>Hang out Furry Felines</li>
+            </ul>
+
+            <img src="images/cats1.JPG" alt="Cats laying in cat tree" width="500">
+
+        </div>
+
+        <!--FOOTER-->
+        <div id="footer" class="bg" style="text-align:center">
+
+            <a href="#header">Back to Top!</a>
+
+            <br>
+            
+            <p>&copy;J CALMEIRO | SE111.02 | 202420</p>
+
+            <!--include validation screenshot below-->
+            <img src="images/valid.png" alt="Validation screenshot" width="100%">
+
+        </div>
+
+    </div><!--/ #wrapper-->
+
+</body>
+</html>
