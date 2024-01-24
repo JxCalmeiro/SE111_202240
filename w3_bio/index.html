@@ -5,26 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Tony Calmeiro" >
-    <meta name="description" content="Week 3 Bio" >
+    <meta name="description" content="Week 3 Multi-Page Bio" >
     
-    <title>W3 | Bio</title>
+    <title>W3 | Home</title>
 
     <!--Tony Calmeiro | SE111.01 | 01/22/2023-->
 
     <style>
+
         div {
             border:3px solid black;
             margin:10px;
             padding:10px;
+        }
+
+        #wrapper {
+            background-color:lightslategray
         }
         
         #header {border:2px solid #4C5C9B;}
 
         #nav {border:2px solid #4C5C9B;}
 
-        #content {border:2px solid #4C5C9B;}
+        #content {border:2px solid darkgray;}
 
         #footer {border:2px solid #4C5C9B;}
+        
+        #footer {text-align: center;}
 
         h1 {text-align: center;}
 
@@ -50,36 +57,56 @@
     <div id="wrapper">
 
         <!--HEADER-->
-        <div id="header">
-            <h1><strong><i>Tony Calmeiro</i></strong></h1>
+        <div id="header" class="border bg">
+            <h1><strong><i>&#9822 Tony Calmeiro &#9822</i></strong></h1>
 
         </div><!--/ #header-->
 
         <!--NAV-->
         <div id="nav">
-            <a href="index.html">Home</a>
-            <a href="schools.html">Schools</a>
-            <a href="hobbies.html">Hobbies</a>
+            <a href="index.html">| Home |</a>
+            <a href="schools.html">| Schools |</a>
+            <a href="hobbies.html">| Hobbies |</a>
 
             <br>
 
-            <a href="#footer">Bottom of Page!</a>
+            <a href="#footer">| Bottom of Page! |</a>
 
         </div><!--/ #nav-->
 
+        <hr>
+
         <!--CONTENT-->
-        <div id="content">
-            <h2>Home Page</h2>
+        <div id="content" class="border">
+            <h2>~Home Page~</h2>
+            <br>
+
+            <h3>&#128100 <em>My Bio - All about me:</em></h3>
+            
+            <br>
+
+            <p>I was born on <b>January 5th 1990</b> in Providence, Rhode Island. I grew up in East Providence, Rhode Island and graduated from East Providence High School in 2008. I worked at <i>Gamestop</i> as a store manager from <u>2008-2013</u>. After that I took a job with <i>AT&T</i> as a store manager from <u>2013-2018</u>. In September of 2018 I left for <i>Marine Corps Recurit Training</i> upon Marine Corps Recruit Depot San Diego, California. After three months of recurit training, I countiued <i>Marine Combat Training</i> for one month at Camp Pendleton, California. Upon My completion of combat training I attended <i>Aviation A&C School</i> in Pensacola, Florida for six months. Then I continued my training at the <i>Naval Aviaiton Tech Training</i> in Virginia Beach, Virginia for three months. When my schooling was complete I was assgined my permanet duty sation with <i>Marine Aviation Logistics Squadron - 11</i> in San Diego, California where I served as an <b>Avionics Technician</b>. In March 2021 I went on a deployment to Iwakuni, Japan until September 2021. After my deployment I spent the rest of my time in service with MALS-11 in San diego, California until September 2023. After my military service I moved back to Rhode Island where I am currently attending <i>New England Institute of Technology</i>, where I am obtaining a bachelors degree in <u>Cyber Security and Network Engineering</u>. 
+            </p>
+
+            <br>
+
+            <img src="images/main/me.jpg" alt="Photo of Tony Calmeiro in a Suit" width="500">
+
 
         </div><!--/ #content-->
 
+        <hr>
+
+
         <!--FOOTER-->
-        <div id="footer" style="text-align:center">
+        <div id="footer" class="border bg">
             <a href="#header">Back to Top!</a>
 
             <br>
 
-            <p>&copy;T_CALMEIRO | SE111.02 | 202420</p>
+            <p>&copy; T_CALMEIRO | SE111.02 | 202420</p>
+
+            <!--img src="" alt="HOME page validation screenshot" width"100%""-->
 
         </div><!--/ #footer-->
 

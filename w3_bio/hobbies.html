@@ -5,26 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Tony Calmeiro" >
-    <meta name="description" content="Week 3 Bio" >
+    <meta name="description" content="Week 3 Multi-Page Bio" >
    
     <title>W3 | Hobbies</title>
 
     <!--Tony Calmeiro | SE111.01 | 01/22/2023-->
 
     <style>
+
         div {
             border:3px solid black;
             margin:10px;
             padding:10px;
+        }
+
+        #wrapper {
+            background-color:lightslategray
         }
         
         #header {border:2px solid #4C5C9B;}
 
         #nav {border:2px solid #4C5C9B;}
 
-        #content {border:2px solid #4C5C9B;}
+        #content {border:2px solid darkgray;}
 
         #footer {border:2px solid #4C5C9B;}
+        
+        #footer {text-align: center;}
 
         h1 {text-align: center;}
 
@@ -50,36 +57,54 @@
     <div id="wrapper">
 
         <!--HEADER-->
-        <div id="header">
-            <h1><strong><i>Tony Calmeiro</i></strong></h1>
+        <div id="header" class="border bg">
+            <h1><strong><i>&#9822 Tony Calmeiro &#9822</i></strong></h1>
 
         </div><!--/ #header-->
 
         <!--NAV-->
         <div id="nav">
-            <a href="index.html">Home</a>
-            <a href="schools.html">Schools</a>
-            <a href="hobbies.html">Hobbies</a>
+            <a href="index.html">| Home| </a>
+            <a href="schools.html">| Schools |</a>
+            <a href="hobbies.html">| Hobbies |</a>
 
             <br>
 
-            <a href="#footer">Bottom of Page!</a>
+            <a href="#footer">| Bottom of Page! |</a>
 
         </div><!--/ #nav-->
 
+        <hr>
+
         <!--CONTENT-->
-        <div id="content">
-            <h2>Hobbies Page</h2>
+        <div id="content" class="border">
+            <h2>~Hobbies Page~</h2>
+
+            <br>
+
+            <h3>&#127932 <em>Things I like to Do:</em></h3>
+
+            <ul>
+                <li>Creating Music</li>
+                <li>Playing Video Games</li>
+                <li>Hang out Furry Felines</li>
+            </ul>
+
+            <br>
+
+            <img src="images/hobbies/cats1.JPG" alt="Cats laying in cat tree" width="500">
 
         </div><!--/ #content-->
 
+        <hr>
+
         <!--FOOTER-->
-        <div id="footer" style="text-align:center">
+        <div id="footer" class="border bg">
             <a href="#header">Back to Top!</a>
 
             <br>
 
-            <p>&copy;T_CALMEIRO | SE111.02 | 202420</p>
+            <p>&copy; T_CALMEIRO | SE111.02 | 202420</p>
 
         </div><!--/ #footer-->
 
