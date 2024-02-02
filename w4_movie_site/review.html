@@ -13,41 +13,134 @@
     <!--Tony Calmeiro | SE111.01 | 02/04/2023-->
 
     <style>
-         div {
-            border:3px solid black;
-            margin:10px;
-            padding:10px;
+        body {
+            
+            background-image: url('bttf_bg.jpg');
         }
 
-        #container {background-color:#C46C2C;}
+        #container {
 
-        .info {border:3px solid #0E5195;}
-        
-        #header {border:3px solid #889185;}
+            width:1480px;
+            padding:20px;/*adds space between content + border of element*/
+            margin:auto; /*once width is set, use 'auto' to center horizontally*/
 
-        #nav {border:3px solid #889185;}
+            border:2px solid black;
 
-        #content {border:3px solid #889185;}
+            box-shadow:0 0 8px black;
 
-        #footer {border:3px solid #889185;}
-        
-        #footer {text-align: center;}
+            border-radius:15px; /*rounds corners*/
 
-        h1 {text-align: center;}
+            background-color:rgba(33, 33, 33, 0.95);
 
-        #nav {text-align: center;}
+            color:white;
+        }
 
-        #nav {font-size: 20px;}
+        #buttons {
 
-        h1 {font-size: 80px;}
+            width:600px;
+            height:60px;
+            margin:auto;
+            /*border:1px solid white;*/
 
-        h2 {font-size: 30px;}
+        }
 
-        p {font-size: 20px;}
+        .link {
 
-        ol {font-size: 20px;}
+            width:150px;
+            height:50px;
+            margin-left:23px;
+            margin-right:23px;
 
-        ul {font-size: 20px;}
+            text-decoration:none;/*removes underline*/
+            font-size:30px;
+
+            float:left; /*puts buttons back in a horiz. line*/
+            text-align:center;
+            line-height:50px;
+
+            background-color:rgb(221, 100, 6);
+            color:white;
+
+            box-shadow:0 0 8px black; /*adds a drop shadow*/
+
+            border-radius:15px;
+
+        }
+
+        .link:hover {
+
+            background-image: url("images/btn_hover.PNG");
+            color:white;
+            background-size: 150px;
+
+            box-shadow:0 0 8px white; /*adds a glow*/
+        }
+
+        .link:visited {
+
+            color:black;
+        }
+
+        #header {
+            text-align:center;
+            padding:0;
+            margin-bottom:0;
+
+        }
+
+        h1 {
+
+            font-size:85px;
+            padding:0;
+            margin:0;
+        }
+
+        h2 {
+            font-size:55px;
+            text-align:center;
+
+            padding:0;
+            margin:0;
+        }
+
+        h4 {
+
+            font-size:35px;
+        }
+
+        #footer {
+            text-align:center;
+        }
+
+        div {
+            padding:20px;
+            margin:10px 5px;
+        }
+
+        a {
+
+            background-color:orange;
+            text-decoration: none;
+            color:white;
+        }
+
+        a:hover {
+            background-color:black;
+        }
+
+        a:visited {
+            color:white;
+        }
+
+        #roof {
+
+            width:100%;
+
+        }
+
+        .special-img {
+            width:100%;
+        } 
     </style>
 
 </head>
@@ -59,19 +152,17 @@
         <!--HEADER-->
         <div id="header">
             <h1><em>Back to the Future</em></h1>
+            <h3>1.21 gigawatts. Great Scott!</h3>
 
         </div><!--/ #header-->
 
         <!--NAV-->
-        <div id="nav">
-
-            <a href="index.html">| HOME |</a>
-            <a href="cast.html">| CAST |</a>
-            <a href="review.html">| REVIEW |</a>
-
-            <br>
-
-            <a href="#footer">| BOTTOM OF PAGE! |</a>
+        <div id="nav">   
+            <div id="buttons">
+            <a class="link" href="index.html">| HOME |</a>
+            <a class="link" href="cast.html">| CAST |</a>
+            <a class="link" href="review.html">| REVIEW |</a>
+            </div>
 
         </div><!--/ #nav-->
         <hr>
@@ -79,6 +170,8 @@
         <!--PAGE CONTENT-->
         <div id="content">
 
+            <h2>REVIEW</h2>
+            <br>
             <h2><u>REVIEW</u> of the movie <em>Back to the Future</em> (1985)</h2>
 
             <p><b>Tony Calmeiro</b>, <i>February 4th, 2024</i></p>
@@ -87,14 +180,17 @@
 
             <!--5-7 sentance review-->
 
+            <a href="https://www.imdb.com/title/tt0088763/" target="_blank">Vist - Back to the Future IMDB site</a>
+
             <!--TRIVIA-->
             <div class="info">
                 <h3>Trivia for <em>Back to the Future</em></h3>
 
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>The rights to the film and its sequels are owned by Robert Zemeckis and Bob Gale. In a 2015 interview, Zemeckis maintained that no reboot or remake of the film would be authorized during his or Gale's lifetime.</li>
+                    <li>Writers Bob Gale and Robert Zemeckis actually received a fan letter from John DeLorean after the film's release, thanking them for immortalizing his car.</li>
+                    <li>The script was rejected 44 times before it was finally green-lit.</li>
+                    <li>After the film's release, body kits were made for DeLoreans to make them look like the time machine.</li>
                 </ul>
 
 

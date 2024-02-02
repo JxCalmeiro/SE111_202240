@@ -13,46 +13,138 @@
     <!--Tony Calmeiro | SE111.01 | 02/04/2023-->
 
     <style>
-
-        div {
-            border:3px solid black;
-            margin:50px;
-            padding:10px;
+        body {
+            
+            background-image: url('bttf_bg.jpg');
         }
 
-        #container {background-color:#C46C2C;}
+        #container {
 
-        .info {border:3px solid #0E5195;}
-        
-        #header {border:3px solid #889185;}
+            width:1480px;
+            padding:20px;/*adds space between content + border of element*/
+            margin:auto; /*once width is set, use 'auto' to center horizontally*/
 
-        #nav {border:3px solid #889185;}
+            border:2px solid black;
 
-        #content {border:3px solid #889185;}
+            box-shadow:0 0 8px black;
 
-        #footer {border:3px solid #889185;}
-        
-        #footer {text-align: center;}
+            border-radius:15px; /*rounds corners*/
 
-        h1 {text-align: center;}
+            background-color:rgba(33, 33, 33, 0.95);
 
-        #nav {text-align: center;}
+            color:white;
+        }
 
-        #nav {font-size: 20px;}
+        #buttons {
 
-        h1 {font-size: 80px;}
+            width:600px;
+            height:60px;
+            margin:auto;
+            /*border:1px solid white;*/
 
-        h2 {font-size: 30px;}
+        }
 
-        p {font-size: 20px;}
+        .link {
 
-        ol {font-size: 20px;}
+            width:150px;
+            height:50px;
+            margin-left:23px;
+            margin-right:23px;
 
-        ul {font-size: 20px;}
+            text-decoration:none;/*removes underline*/
+            font-size:30px;
+
+            float:left; /*puts buttons back in a horiz. line*/
+            text-align:center;
+            line-height:50px;
+
+            background-color:rgb(221, 100, 6);
+            color:white;
+
+            box-shadow:0 0 8px black; /*adds a drop shadow*/
+
+            border-radius:15px;
+
+        }
+
+        .link:hover {
+
+            background-image: url("images/btn_hover.PNG");
+            color:white;
+            background-size: 150px;
+
+            box-shadow:0 0 8px white; /*adds a glow*/
+        }
+
+        .link:visited {
+
+            color:black;
+        }
+
+        #header {
+            text-align:center;
+            padding:0;
+            margin-bottom:0;
+
+        }
+
+        h1 {
+
+            font-size:85px;
+            padding:0;
+            margin:0;
+        }
+
+        h2 {
+            font-size:55px;
+            text-align:center;
+
+            padding:0;
+            margin:0;
+        }
+
+        h4 {
+
+            font-size:35px;
+        }
+
+        #footer {
+            text-align:center;
+        }
+
+        div {
+            padding:20px;
+            margin:10px 5px;
+        }
+
+        a {
+
+            background-color:orange;
+            text-decoration: none;
+            color:white;
+        }
+
+        a:hover {
+            background-color:black;
+        }
+
+        a:visited {
+            color:white;
+        }
+
+        #roof {
+
+            width:100%;
+
+        }
+
+        .special-img {
+            width:100%;
+        } 
     </style>
 
 </head>
-<body style="background-image: url(images/main/delorean_bg.jpg);">
+<body>
     
     <div id ="container">
 
@@ -60,19 +152,17 @@
         <!--HEADER-->
         <div id="header">
             <h1><em>Back to the Future</em></h1>
+            <h3>1.21 gigawatts. Great Scott!</h3>
 
         </div><!--/ #header-->
 
         <!--NAV-->
         <div id="nav">   
-
-            <a href="index.html">| HOME |</a>
-            <a href="cast.html">| CAST |</a>
-            <a href="review.html">| REVIEW |</a>
-
-            <br>
-
-            <a href="#footer">| BOTTOM OF PAGE! |</a>
+            <div id="buttons">
+            <a class="link" href="index.html">| HOME |</a>
+            <a class="link" href="cast.html">| CAST |</a>
+            <a class="link" href="review.html">| REVIEW |</a>
+            </div>
 
         </div><!--/ #nav-->
         <hr>
@@ -80,22 +170,31 @@
         <!--PAGE CONTENT-->
         <div id="content">
 
+            <h2>HOME</h2>
+            <br>
             <h2><u>ABOUT</u> the movie <em>Back to the Future</em> (1985)</h2>
 
             <p>A <i>brief</i> synopsis of <em>Back to the Future</em>.</p>
 
-            <img src="images/main/movie_poster.webp" alt="movie poster of Back to the Future (1985)" height="500" title="Roads? Where We're Going, We Don't Need Roads.">
+            <img src="images/main/movie_poster.webp" alt="movie poster of Back to the Future (1985)" 
+            class="special-img" width="500" title="Roads? Where We're Going, We Don't Need Roads.">
 
             <br>
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/WRrCVyT09ow?si=oyQ1zs5aOref4-XD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             <div class="info">
 
                 <!--company + movie credits-->
-                <p><b>Production Company:</b> NAME HERE</p>
+                <p><b>Production Company:</b> Universal Pictures, Amblin Enertainment</p>
+                <p><b>Release Date:</b> July 3, 1985</p>
+                <p><b>Genres:</b> Adventure, Comedy, Sci-Fi</p>
+                <p><b>Rating:</b> PG</p>
+                <p><b>Running time:</b> 116 min</p>
 
             </div>
+
+            <br>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/WRrCVyT09ow?si=oyQ1zs5aOref4-XD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
         
         </div><!--/ #content-->
