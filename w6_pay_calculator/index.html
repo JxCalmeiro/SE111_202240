@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Tony Calmeiro">
+
+    <meta name="description" content="Week 6 Pay Calculator">
+
+    <title>Pay Calculator</title>
+
+</head>
+
+<body>
+    <!--Page Heading-->
+    <h1>Pay Calculator</h1>
+
+    <script>
+
+        var pref = prompt(`Welcome to the pay calculator, do you wish to continue?\nType "yes" or "no"`)
+
+        function checkPref(pref)
+        {
+            if (pref.toLowerCase() === `yes`)
+            {
+            
+            //Gets users hourly pay
+            var payRate = prompt(`How much do you make per hour?`)
+            payRate = Number(payRate)
+            alert(`Your hourly pay rate is: $${payRate}`)
+            console.log(`The value for payRate is: ${payRate}`)
+            
+            //Gets users weekly hours worked
+            var hours = prompt(`How many hours do you work per week?`)
+            hours = Number(hours)
+            alert(`Your hours worked per week is: ${hours}`)
+            console.log(`The value for hours is: ${hours}`)
+
+            //Performs Pay Mathematical Equations
+            var weeklyPay = payRate * hours
+            weeklyPay = Number(weeklyPay)
+            var grossPay = weeklyPay * 2
+            grossPay = Number(grossPay)
+            var taxes = grossPay * .20
+            taxes = Number(taxes)
+            var netPay = grossPay - taxes
+            netPay = Number(netPay)
+
+            //Displays Users Gross Pay, Taxes, and Net Pay
+            alert(`Gross Pay: $${grossPay.toFixed(2)}\nUncle Sam's Share: $${taxes.toFixed(2)}\nNet Pay: $${netPay.toFixed(2)}`)
+            console.log(`The value for weeklyPay is: ${weeklyPay}`)
+            console.log(`The value for grossPay is: ${grossPay}`)
+            console.log(`The value for taxes is: ${taxes}`)
+            console.log(`The value for netPay is: ${netPay}`)
+            
+            }
+
+            else if (pref.toLowerCase() === `no`)
+
+            {
+
+                return 0
+
+            }
+
+            else 
+
+            {
+
+                alert(`UH OH! Invalid Entry!\nPlease reload and re-read directions`)
+                return `bad`
+            
+            }
+
+        }
+
+
+        var decision = checkPref(pref)
+
+        if (decision == 0)
+
+        {
+
+            alert(`Okay, goodbye.`)
+
+        }
+
+        else if (decision == `bad`)
+
+        {
+
+            alert(`Please reload`)
+
+        }
+    
+    </script>
