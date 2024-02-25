@@ -23,7 +23,7 @@
     <h1>Pay Calculator Form</h1>
 
     <!--FORM- Read through to get an idea of what your IDs are!-->
-    <form style="border:1px solid blue;">
+    <form style="border:1px solid #A85D5D;">
         <table>
             <tr>
                 <!--left side: questions-->
@@ -34,7 +34,7 @@
                 <!--right side: input values-->
                 <td>
                     <input type="text" name="first" id="first">
-
+                    
                 </td>
             </tr>
 
@@ -42,6 +42,7 @@
                 <!--left side: questions-->
                 <td>
                     <label for="last" class="questions">LAST: </label>
+                    
                 </td>
 
                 <!--right side: input values-->
@@ -101,7 +102,7 @@
     <h2>User's Information:</h2>
     <!--BELOW IS WHERE YOUR USER'S INFO WILL GO!-->
     <!--when you write your JS correctly, the form data will be written to the below space in your page-->
-    <div id="info" style="border:1px solid black; width:500px; height:300px;">
+    <div id="info" style="border:1px solid #45935B; width:500px; height:300px;">
     
     </div><!--# info-->
 
@@ -115,33 +116,39 @@
     
         var body = document.querySelector(`body`)
         console.log(body)
-        console.log(`The body's ID is: ${body.id}`)
         body.id = `bodyId`
+        console.log(`The body's ID is: ${body.id}`)
+        
 
         var title = document.querySelector(`h1`)
         console.log(title)
-        console.log(`The h1's ID is: ${title.id}`)
         title.id = `titleId`
+        console.log(`The h1's ID is: ${title.id}`)
+        
 
         var title2 = document.querySelector(`h2`)
         console.log(title2)
-        console.log(`The h2's ID is: ${title2.id}`)
         title2.id = `title2Id`
+        console.log(`The h2's ID is: ${title2.id}`)
+        
 
         //var user = document.querySelector(`div`)
         //console.log(user)
-        //console.log(`The div's ID is: ${user.id}`)
         //user.id = `userId`
+        //console.log(`The div's ID is: ${user.id}`)
+        
 
         //var inputs = document.getElementById(`input`).vaule
         //console.log(inputs)
-        //console.log(`The input's ID is: ${inputs.id}`)
         //inputs.id = `inputsId`
+        //console.log(`The input's ID is: ${inputs.id}`)
+        
 
         //var buttons = document.querySelector(`button`)
         //console.log(buttons)
-        //console.log(`The button's ID is: ${buttons.id}`)
         //buttons.id = `buttonsId`
+        //console.log(`The button's ID is: ${buttons.id}`)
+        
 
 
         //enter button can only be clicked once
@@ -155,8 +162,17 @@
         {
           
             var fname = document.getElementById(`first`).value
+                firstNew = fname  
+                firstNew1 = firstNew.substring(0,1).toUpperCase();  // first letter = J  
+                firstNew2 = firstNew.substring(1);     // after 1st letter = avatpoint  
+                firstNew3 = firstNew1 + firstNew2
+            
 
             var lname = document.getElementById(`last`).value
+                lastNew = lname  
+                lastNew1 = lastNew.substring(0,1).toUpperCase();  // first letter = J  
+                lastNew2 = lastNew.substring(1);     // after 1st letter = avatpoint  
+                lastNew3 = lastNew1 + lastNew2
 
             var rate = document.getElementById(`rate`).value
             rate = Number(rate)
@@ -164,7 +180,7 @@
             var hours = document.getElementById(`hours`).value
             hours = Number(hours)
 
-            var fullName = fname + ` ` + lname
+            var fullName = firstNew3 + ` ` + lastNew3
 
             var grossPay = rate * hours
             grossPay = Number(grossPay)
@@ -193,8 +209,16 @@
         function confirmData(event)
         {
             var fname = document.getElementById(`first`).value
+                firstNew = fname  
+                firstNew1 = firstNew.substring(0,1).toUpperCase();  // first letter = J  
+                firstNew2 = firstNew.substring(1);     // after 1st letter = avatpoint  
+                firstNew3 = firstNew1 + firstNew2
 
             var lname = document.getElementById(`last`).value
+                lastNew = lname  
+                lastNew1 = lastNew.substring(0,1).toUpperCase();  // first letter = J  
+                lastNew2 = lastNew.substring(1);     // after 1st letter = avatpoint  
+                lastNew3 = lastNew1 + lastNew2
 
             var rate = document.getElementById(`rate`).value
             rate = Number(rate)
@@ -202,7 +226,7 @@
             var hours = document.getElementById(`hours`).value
             hours = Number(hours)
 
-            var fullName = fname + ` ` + lname
+            var fullName = firstNew3 + ` ` + lastNew3
 
             var grossPay = rate * hours
             grossPay = Number(grossPay)
@@ -213,7 +237,7 @@
             var netPay = grossPay - taxes
             netPay = Number(netPay)
 
-            console.log(`User Data =\nName: ${fullName}\nGross Pay: ${grossPay}\nTaxes: ${taxes}\nNet Pay: ${netPay}`)
+            console.log(`Confirmed Data =\nName: ${fullName}\nGross Pay: ${grossPay}\nTaxes: ${taxes}\nNet Pay: ${netPay}`)
 
             alert(`Name: ${fullName}\nGross Pay: $${grossPay.toFixed(2)}\nUncle Sam's Share: $${taxes.toFixed(2)}\nNet Pay: $${netPay.toFixed(2)}`)
         }
