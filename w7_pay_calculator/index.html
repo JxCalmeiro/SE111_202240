@@ -132,23 +132,26 @@
         console.log(`The h2's ID is: ${title2.id}`)
         
 
-        //var user = document.querySelector(`div`)
-        //console.log(user)
-        //user.id = `userId`
-        //console.log(`The div's ID is: ${user.id}`)
-        
+        var userInfo = document.querySelector(`div`)
+        console.log(`The div's ID is: ${userInfo}`)
 
-        //var inputs = document.getElementById(`input`).vaule
-        //console.log(inputs)
-        //inputs.id = `inputsId`
-        //console.log(`The input's ID is: ${inputs.id}`)
-        
+        var first = document.getElementById(`first`)
+        console.log(`The first name's ID is: ${first}`)
+       
+        var last = document.getElementById(`last`)
+        console.log(`The last name's ID is: ${last}`)
 
-        //var buttons = document.querySelector(`button`)
-        //console.log(buttons)
-        //buttons.id = `buttonsId`
-        //console.log(`The button's ID is: ${buttons.id}`)
-        
+        var rate = document.getElementById(`rate`)
+        console.log(`The pay rate's ID is: ${rate}`)
+
+        var hours = document.getElementById(`hours`)
+        console.log(`The hours ID is: ${hours}`)
+
+        var enterButton = document.getElementById(`enter-button`)
+        console.log(enterButton)
+
+        var confirmButton = document.getElementById(`confirm-button`)
+        console.log(confirmButton)
 
 
         //enter button can only be clicked once
@@ -161,28 +164,28 @@
         function formData(event)
         {
           
-            var fname = document.getElementById(`first`).value
+            var fname = first.value
                 firstNew = fname  
-                firstNew1 = firstNew.substring(0,1).toUpperCase();  // first letter = J  
-                firstNew2 = firstNew.substring(1);     // after 1st letter = avatpoint  
+                firstNew1 = firstNew.substring(0,1).toUpperCase();
+                firstNew2 = firstNew.substring(1);
                 firstNew3 = firstNew1 + firstNew2
             
 
-            var lname = document.getElementById(`last`).value
+            var lname = last.value
                 lastNew = lname  
-                lastNew1 = lastNew.substring(0,1).toUpperCase();  // first letter = J  
-                lastNew2 = lastNew.substring(1);     // after 1st letter = avatpoint  
+                lastNew1 = lastNew.substring(0,1).toUpperCase();
+                lastNew2 = lastNew.substring(1);  
                 lastNew3 = lastNew1 + lastNew2
 
-            var rate = document.getElementById(`rate`).value
-            rate = Number(rate)
+            var rate_v = rate.value
+            rate_v = Number(rate_v)
         
-            var hours = document.getElementById(`hours`).value
-            hours = Number(hours)
+            var hours_v = hours.value
+            hours_v = Number(hours_v)
 
             var fullName = firstNew3 + ` ` + lastNew3
 
-            var grossPay = rate * hours
+            var grossPay = rate_v * hours_v
             grossPay = Number(grossPay)
 
             var taxes = grossPay * .2
@@ -191,7 +194,7 @@
             var netPay = grossPay - taxes
             netPay = Number(netPay)
 
-            console.log(`User Data =\nName: ${fullName}\nGross Pay: ${grossPay}\nTaxes: ${taxes}\nNet Pay: ${netPay}`)
+            console.log(`User Data =\nName: ${fullName}\nGross Pay: ${grossPay.toFixed(2)}\nTaxes: ${taxes.toFixed(2)}\nNet Pay: ${netPay.toFixed(2)}`)
 
             var info = document.querySelector(`#info`)
             info.innerHTML = ``
@@ -208,27 +211,27 @@
         //calls function confirmData and displays pop up to user
         function confirmData(event)
         {
-            var fname = document.getElementById(`first`).value
+            var fname = first.value
                 firstNew = fname  
-                firstNew1 = firstNew.substring(0,1).toUpperCase();  // first letter = J  
-                firstNew2 = firstNew.substring(1);     // after 1st letter = avatpoint  
+                firstNew1 = firstNew.substring(0,1).toUpperCase();  
+                firstNew2 = firstNew.substring(1);      
                 firstNew3 = firstNew1 + firstNew2
 
-            var lname = document.getElementById(`last`).value
+            var lname = last.value
                 lastNew = lname  
-                lastNew1 = lastNew.substring(0,1).toUpperCase();  // first letter = J  
-                lastNew2 = lastNew.substring(1);     // after 1st letter = avatpoint  
+                lastNew1 = lastNew.substring(0,1).toUpperCase();  
+                lastNew2 = lastNew.substring(1);       
                 lastNew3 = lastNew1 + lastNew2
 
-            var rate = document.getElementById(`rate`).value
-            rate = Number(rate)
+            var rate_v = rate.value
+            rate_v = Number(rate_v)
         
-            var hours = document.getElementById(`hours`).value
-            hours = Number(hours)
+            var hours_v = hours.value
+            hours_v = Number(hours_v)
 
             var fullName = firstNew3 + ` ` + lastNew3
 
-            var grossPay = rate * hours
+            var grossPay = rate_v * hours_v
             grossPay = Number(grossPay)
 
             var taxes = grossPay * .2
@@ -237,7 +240,7 @@
             var netPay = grossPay - taxes
             netPay = Number(netPay)
 
-            console.log(`Confirmed Data =\nName: ${fullName}\nGross Pay: ${grossPay}\nTaxes: ${taxes}\nNet Pay: ${netPay}`)
+            console.log(`Confirmed Data =\nName: ${fullName}\nGross Pay: ${grossPay.toFixed(2)}\nTaxes: ${taxes.toFixed(2)}\nNet Pay: ${netPay.toFixed(2)}`)
 
             alert(`Name: ${fullName}\nGross Pay: $${grossPay.toFixed(2)}\nUncle Sam's Share: $${taxes.toFixed(2)}\nNet Pay: $${netPay.toFixed(2)}`)
         }
