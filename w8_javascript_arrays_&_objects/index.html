@@ -9,45 +9,141 @@
     <title>Week 8 | Homework Assignment</title>
 
 	<!--Tony Calmeiro | SE111.01 | 03/04/2024-->
+	<style>
+        /*write CSS in here!*/
+
+        /*selecting an element by TAG TYPE*/
+        /*in CSS, this makes ALL elements of the type styled*/
+        body {
+            background-color:grey;
+        }
+
+        table {
+            border:1px solid white;
+            width:50px;
+            margin:auto;
+            text-align:left;
+        }
+
+
+        /*selecting an element by #ID*/
+        /*in CSS, this makes ONLY THE ELEMENT with the ID styled*/
+
+        #wrapper {
+            width:1200px;
+            background-color:slategrey;
+            color:white;
+            font-family:Helvetica, sans-serif;
+            margin:auto;
+            padding:10px;
+            box-shadow: 0 0 8px black;
+            text-align:center;
+        }
+
+        #content {
+            border:1px solid lightslategrey;
+            padding:10px;
+            margin:20px 10px;
+
+        }
+
+        
+
+        #footer {
+            font-size: 10px;
+        }
+
+        /*selecting an element by .CLASS*/
+        /*in CSS, this makes ALL elements of the CLASS NAME styled*/
+        .button {
+            width:175px;
+            height:50px;
+            background-color:lightslategray;
+            color:darkslategrey;
+            line-height:50px;
+            text-align:center;
+            margin:auto;
+            margin-top:25px;
+            display:block;
+            border:1px solid white;
+        }
+
+        .button:hover {
+            background-color:white;
+        }
+    </style>
 
 </head>
 <body>
+	<div id="wrapper">
 
-    <h1>List Of People</h1>
-	<p>
-		Please fill in the form and click the submit button.
-	</p>
-	<div>
-		<table>
-			<tr>
-				<td><label for="first">First Name</label></td>
-				<td><input id="first" type="text" name="first" placeholder="Ivan"></td>
-			</tr>
-			<tr>
-				<td><label for="last">Last Name</label></td>
-				<td><input id="last" type="text" name="last" placeholder="Drago"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input id="button" type="button" value="submit"></td>
-			</tr>
-		</table>
-	<div>
-	<div id="output">
+        <div id="header">
+            <h1>List Of People</h1>
+            <p><i>Please fill in the form and click the submit button.</i></p>
+        </div><!-- /#header -->
+
+		<div id="content">
+			<form id="myForm">
+
+				<table>
+					<tbody>
+						<tr>
+							<td><label for="first">First Name</label></td>
+							<td><input id="first" type="text" name="first" placeholder="Ivan"></td>
+						</tr>
+						<tr>
+							<td><label for="last">Last Name</label></td>
+							<td><input id="last" type="text" name="last" placeholder="Drago"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input id="button" type="button" value="SUBMIT" class="button"></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
 	
-	</div>
+			<div id="output">
+	
+			</div><!--/ #output -->
+		</div><!--/ #content -->
+
+			<!--footer for final notes of game site-->
+			<div id="footer">
+
+				<p>&copy; -Tony Calmeiro- | SE111 | 202420</p>
+				<h6><a href="../index.html" target="_blank">Tony's Repo Index</a></h6>
+	
+				<!--screeshot of validation below-->
+				<a href="validation.png"><img src="validation.png" alt="screenshot of validation for page" style="width:50%"></a>
+				
+	
+			</div><!--/ #footer -->
+
+		
+	</div><!--/ #wrapper -->
 
 	<!--The script tag should go after the HMTL, but inside of the body.-->
 	<!--JavaScript cannot find tags, if they are not parsed before the script runs-->
     <script>
 	
 		//Store the elements (tags) in variables
+		var fname = document.getElementById(`first`)
+		var lname = document.getElementById(`last`)
+		var submit = document.getElementById(`button`)
+		var resultBox = document.getElementById(`output`)
 		
 
 		//Make an array to store the people
+		var people = []
 		
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
+		submit.addEventListener(`click`, calcAndDisplay)
+
+		var form = document.getElementById(`myForm`)
+        function handleForm(event) {event.preventDefault() }
+        form.addEventListener(`button`, handleForm)
 		
 		
 		/*-----------------------------------------------------
@@ -72,16 +168,24 @@
 			    //1. first: will be a string that uses the first Input's value
 				//2. last: will be a string that uses the last Input's value
 
+			var firstName = fname.value
+			var lastName = lname.value
+
             var person = {
-
-
-
+				first: firstName,
+				last: lastName,
             }//end of person object
+
+			console.log(person)
+			
 
 
 
 
 			//Add the person object into the people array by using the .push() array method.
+			people.push(person)
+			
+
 			
 
 			//Bubble sort people on the last name
@@ -99,13 +203,15 @@
 			}//end of bubble sort algorithm!
 
 			//console.log the people array to check that the people array is formatted correctly and is populated with the correct objects
+			console.log(people)
 			
 
-			//create a variable called 'output' that has an empty string value stored to 
+			//create a variable called 'output' that has an empty string value stored to
+			var resultContent = ""
 			
 
 			//Loop through the objects in the people array
-			for()
+			for(let i = 0; i <people.length; i++)
             {
 
 				//Loop through each property in the object
@@ -115,22 +221,28 @@
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
+					resultContent += `<p><b>${key.toLocaleUpperCase()}:</b> ${people[i][key]} </p>`
 				
 
                 }
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
+				resultContent += '<hr>'
 				
 
 
 			}//end of loop going through people array to edit 'output'
+				
 
 				//log the output string
 				//replace the outputDiv's inner HTML with the output string
+				console.log(output)
+				resultBox.innerHTML = resultContent
+
 				
 
 
 
-		}
+		}//calcAndDisplay() CLOSE
 	
     </script>
     
